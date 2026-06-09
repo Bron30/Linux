@@ -1,0 +1,9 @@
+read n
+read -a arr
+
+res=0
+for x in "${arr[@]}"; do
+    ((res ^= x))
+done
+
+echo "$res"

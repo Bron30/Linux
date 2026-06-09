@@ -1,0 +1,2 @@
+read expr
+awk "BEGIN { printf \"%.3f\", $expr }"

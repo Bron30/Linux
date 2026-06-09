@@ -1,0 +1,7 @@
+
+read -n 1 c
+
+case "$c" in
+  Y|y) echo "YES" ;;
+  N|n) echo "NO" ;;
+esac

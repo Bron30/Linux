@@ -1,0 +1,23 @@
+awk '
+{
+    key = tolower($0)
+
+    if (NR == 1) {
+        prev = key
+        orig = $0
+        count = 1
+        next
+    }
+
+    if (key == prev) {
+        count++
+    } else {
+        print count, orig
+        prev = key
+        orig = $0
+        count = 1
+    }
+}
+END {
+    print count, orig
+}'
